@@ -1,7 +1,9 @@
 import java.io.File;
 
 public class R13_FIO02_J {
-    //non-compliant version
-    File file = new File(args[0]);
-    file.delete();
+    //compliant version
+    File file = new File("file");
+    if (!file.delete()) {
+        // handle failed deletion error
+    }
 }
