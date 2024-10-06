@@ -1,7 +1,8 @@
 public class R09_LCK01_J {
-    //non-compliant version
+    //compliant version
     private int count = 0;
-    private final Integer Lock = count;
+    // it seems Integer() is deprecated so I am unsure of the usefulness of this compliance solution.
+    private final Integer Lock = new Integer(count);
  
     public void doSomething() {
         synchronized (Lock) {
